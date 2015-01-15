@@ -1,10 +1,17 @@
+
+/*CSS RESET*/
 * {
 	margin: 0;
 	padding: 0;
 	font-size: 100%;
 	text-decoration: none;
+	max-width: 1440px;
+	max-height: 787px;
 	
 }
+/**************/
+/**************/
+
 
 body {
 	
@@ -14,31 +21,143 @@ body {
 	
 
 }
-button {
-	margin-left: 45%;
-	font-family: helvetica;
-	font-weight: bold;	 
-	height: 5em;
-	width: 8em;
-}
+
+
+/*STYLING FOR THE ALL THE CIRLCES*/
+/**************/
+/**************/
 h4 {
+	position: absolute;
 	font-weight: bold;
 	font-size: 24px;
 	font-family: helvetica;
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	background-color: #fff;
+	border: solid 4px #88D509;
+
 }
+/*STYLING FOR INPUT*/
+/*****************/
+/*****************/
+input {
+	border-style: none;
+}
+/*TEXT IN CIRCLES STYLING*/
+h4 p {
+	color: red;
+	margin-top: 35px;
+	text-align: center;
+
+}
+p {
+	z-index: 3;
+}
+/*THIS IS THE BOX THAT GREETS PLAYER ON PAGE LOAD*/
+section {
+	position: relative;
+	height: 350px;
+	width: 1400px;
+	vertical-align: middle;
+	margin: 10px;
+	background-color: #01E5D4;
+	border: solid 1px;
+	border-radius: 2.5%;
+	z-index: 1;
+	border: solid 4px #88D509;
+	font-family: helvetica;
+	text-transform: uppercase;
+}
+section:hover {
+	box-shadow: 0 10px 6px -6px #010504;
+}
+section h1 {
+	position: absolute;
+	font-size: 48px;
+	margin-left: 35%;
+	
+}
+p.gameTime {
+	color: red;
+	text-indent: 60px;
+}
+/*THIS IS AREA WHERE THE DUCKS FLY*/
 #container {
 	position: relative;
 	width: auto;
 	height: 560px;
 	
 	border: solid 1px;
-	 
+	border-color: transparent;
+	/*Cursor image*/
+	cursor: url(./images/mira.gif) 61 59, auto;
+
 }
+
+/*PLAYERS NAME STYLING */
+/**************/
+/**************/
+#playerId {
+	position: absolute;
+	font-size: 30px;
+	margin-left: auto;
+	margin-top: 4.9em;
+	font-family: helvetica;
+	background-color: #fff;
+	opacity: .7;
+	border: solid 4px #88D509;
+}
+/*#playerId:nth-child('p') {
+	
+}*/
+#playerWelcomeBanner {
+	margin-left: 35%;
+	margin-top: 4em;
+	font-size: 24px;
+
+}
+/*BUTTON FOR SUBMITTING NAME*/
+#nameButton {
+	font-weight: bold;
+	height: 1.5em;
+	width: 4em;
+	background-color: #01E5D4;
+	border-style: none;
+}
+#nameButton:hover {
+	background-color: #2cf4e0;
+	box-shadow: 0 10px 6px -6px #010504;
+}
+/*STARTS THE GAME AFTER PLAYER SUBMITS NAME AND MAKES BANNER FADE AWAY*/
+/**************/
+/**************/
+#startButton {
+	margin-left: 30%;
+	margin-top: 5%;
+	font-family: helvetica;
+	font-weight: bold;	 
+	height: 5em;
+	width: 8em;
+	background-color: #01E5D4;
+	border-style: none;
+
+}
+#startButton:hover {
+	
+	background-color: #2cf4e0;
+	
+	box-shadow: 0 10px 6px -6px #010504;
+}
+/*THIS IS CIRCLES IN THE BOTTEM RIGHT THAT READ THE STATS*/
+/**************/
+/**************/
+
 #ducks {
 	position: absolute;
 	font-size: 34px;
 	font-weight: bold;
-	right: 25px;
+	right: 150px;
 	bottom: 5px;
 	
 }
@@ -46,48 +165,88 @@ h4 {
 	position: absolute;
 	font-size: 24px;
 	font-weight: bold;
-	left: 25px;
+	right: 430px;
 	bottom: 5px;
+	z-index: 1;
 }
 #stats {
 	position: relative;
 	text-transform: uppercase;
 }
+
+/**************/
+/**************/
+#time {
+	position: relative;
+	margin-left: 80%;
+	bottom: 5px;
+}
+/*THE BIRD IMAGES*/
+/**************/
+/**************/
 .bird {
 	position: absolute;
+	background-image: url('/images/greenduck.gif');
 	
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 70px;
+	background-color: transparent;
+	transform: scaleX(-1);
 	
-	height: 50px;
-	width: 50px;
-	background-color: green;
-	border: solid 1px;
-
-	
-	
+	z-index: 1;
 
 }
+/**************/
+/**************/
 
+/*THESE ARE THE CLOCKS AND COUNTERS STYLING*/
+/**************/
+/**************/
+.gameTime {
+	position: absolute;
+	font-size: 24px;
+	font-weight: bold;
+	top: 70px;
+	/*right: -110px;*/
+
+}
 .hits {
 	position: absolute;
 	font-size: 24px;
 	font-weight: bold;
-	right: 25px;
-	bottom: 25px;
+	/*right: 35px;*/
+	right: -75px;
+	bottom: -100px;
 
 }
 
+.shots {
+	position: absolute;
+	font-size: 24px;
+	font-weight: bold;
+	left: 65px;
+	bottom: -100px;
+
+}
 .timer {
+	position: absolute;
 	font-size: 4em;
 	font-weight: bold;
 	margin-left: 10em;
 	margin-top: 2em;
 
+}
+/**************/
+/**************/
+
+/*THIS IS BANNER WHERE PLAYER ENTERS NAME ON PAGE LOAD*/
+/**************/
+/**************/
+.intro {
+	position: absolute;
+	margin-left: 35%;
+	margin-top: 6em;
 
 }
-.shots {
-	position: absolute;
-	font-size: 24px;
-	font-weight: bold;
-	left: 25px;
-	bottom: 25px;
-}
+
