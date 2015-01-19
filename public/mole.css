@@ -82,7 +82,7 @@ p.gameTime {
 	color: red;
 	text-indent: 60px;
 }
-/*THIS IS AREA WHERE THE DUCKS FLY*/
+/*THIS  THE AREA WHERE THE DUCKS FLY*/
 #container {
 	position: relative;
 	width: auto;
@@ -95,6 +95,9 @@ p.gameTime {
 
 }
 
+#left, #right {
+	float: left;
+}
 /*PLAYERS NAME STYLING */
 /**************/
 /**************/
@@ -124,6 +127,7 @@ p.gameTime {
 	width: 4em;
 	background-color: #01E5D4;
 	border-style: none;
+
 }
 #nameButton:hover {
 	background-color: #2cf4e0;
@@ -187,13 +191,14 @@ p.gameTime {
 .bird {
 	position: absolute;
 	background-image: url('/images/greenduck.gif');
-	
+	margin-top: 560px;
 	background-repeat: no-repeat;
 	height: 70px;
 	width: 70px;
 	background-color: transparent;
 	transform: scaleX(-1);
-	
+	/*transform: rotate(-45deg);*/
+
 	z-index: 1;
 
 }
@@ -250,3 +255,37 @@ p.gameTime {
 
 }
 
+div #birdStartPoint .startHere {
+	position: relative;
+	visibility: hidden;
+	border-width: 1px;
+	height: 70px;
+	width: 70px;
+	float: left;
+	margin-left: 75px;
+	margin-top: 560px;
+	/*background-image: url('/images/greenduck.gif');*/
+	background-repeat: no-repeat;
+	transform: scaleX(-1);
+
+
+}
+
+/*position: absolute;
+	
+
+
+accepted
+Your code isn't working because you have used toggle in one place and $toggle in another.
+
+But, this can be done more simply like this:
+
+$(document).ready(function(){
+    $(".login").toggle(function() {
+        $(this).animate({height: '200'});
+    }, function() {
+        $(this).animate({height: '100'});
+    });​
+});	
+
+*/
