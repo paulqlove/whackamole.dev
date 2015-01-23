@@ -9,7 +9,7 @@ $(document).ready(function(){
 	//countdown for the game
 	
 	var gameCounter = 15;
-	var replacebirdID;
+	
 	var numberGenerator;
 
 	
@@ -77,13 +77,9 @@ $(document).ready(function(){
 		
 		$(replacebirdID).css('visibility','visible');
 		//make the bird  appear in the appropriate div and fly right or left
-		if (numberGenerator > 5) {
+		if (numberGenerator >= 5) {
 			
 			$(replacebirdID).animate({top: '-=350', left: '-=350'},2200);
-			
-				
-		
-
 		
 			
 		} else {
